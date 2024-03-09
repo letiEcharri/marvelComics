@@ -19,9 +19,11 @@ struct ComicListView<T: ComicListViewModelContract>: View {
     }
     
     var body: some View {
-        NavigationView {
-            List {
-                listRow
+        LoadingView(isShowing: $viewModel.loading) {
+            NavigationView {
+                List {
+                    listRow
+                }
             }
         }
     }
