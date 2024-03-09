@@ -28,7 +28,9 @@ class ComicListViewModel: ComicListViewModelContract {
         Task {
             do {
                 let dataComics = try await useCases.getList.execute()
-                comics = dataComics.compactMap { $0.title }
+                DispatchQueue.main.async {
+                    self.comics = dataComics.compactMap { $0.title }
+                }
             } catch {
                 print(error)
             }
