@@ -14,6 +14,7 @@
 		B80657842B9CCC2600D4254D /* marvelComicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657832B9CCC2600D4254D /* marvelComicsTests.swift */; };
 		B806578E2B9CCC2600D4254D /* marvelComicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806578D2B9CCC2600D4254D /* marvelComicsUITests.swift */; };
 		B80657902B9CCC2600D4254D /* marvelComicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806578F2B9CCC2600D4254D /* marvelComicsUITestsLaunchTests.swift */; };
+		B806579F2B9CD04400D4254D /* ComicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806579E2B9CD04400D4254D /* ComicListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B80657892B9CCC2600D4254D /* marvelComicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelComicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B806578D2B9CCC2600D4254D /* marvelComicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelComicsUITests.swift; sourceTree = "<group>"; };
 		B806578F2B9CCC2600D4254D /* marvelComicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelComicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B806579E2B9CD04400D4254D /* ComicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		B80657702B9CCC2400D4254D /* marvelComics */ = {
 			isa = PBXGroup;
 			children = (
+				B806579D2B9CCFEE00D4254D /* presentation */,
 				B80657712B9CCC2400D4254D /* marvelComicsApp.swift */,
 				B80657732B9CCC2400D4254D /* ContentView.swift */,
 				B80657752B9CCC2500D4254D /* Assets.xcassets */,
@@ -127,6 +130,14 @@
 				B806578F2B9CCC2600D4254D /* marvelComicsUITestsLaunchTests.swift */,
 			);
 			path = marvelComicsUITests;
+			sourceTree = "<group>";
+		};
+		B806579D2B9CCFEE00D4254D /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B806579E2B9CD04400D4254D /* ComicListView.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B80657742B9CCC2400D4254D /* ContentView.swift in Sources */,
+				B806579F2B9CD04400D4254D /* ComicListView.swift in Sources */,
 				B80657722B9CCC2400D4254D /* marvelComicsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
