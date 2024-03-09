@@ -22,15 +22,7 @@ class ComicRepository: ComicRepositoryContract, DataSource {
                 }
                 do {
                     let dataComics = try JSONDecoder().decode(ComicListResponse.self, from: data)
-                    let comics = dataComics.data.results.compactMap {
-                        Comic(id: $0.id,
-                              digitalId: $0.digitalId,
-                              title: $0.title,
-                              issueNumber: $0.issueNumber,
-                              variantDescription: $0.variantDescription,
-                              description: $0.description,
-                              isbn: $0.isbn)
-                    }
+                    let comics = dataComics.data.results.compactMap { $0.toDomain() }
                     continuation.resume(returning: comics)
                 } catch {
                     continuation.resume(throwing: error)

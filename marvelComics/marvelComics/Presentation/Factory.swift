@@ -16,7 +16,9 @@ enum Factory {
         case .list:
             let repository = ComicRepository()
             let getListUseCase = GetComicListUseCase(repository: repository)
-            let useCases = ComicListViewModel.UseCases(getList: getListUseCase)
+            let getComicListGroupByCreatorUseCase = GetComicListGroupByCreatorUseCase(repository: repository)
+            let useCases = ComicListViewModel.UseCases(getList: getListUseCase,
+                                                       getGroupedList: getComicListGroupByCreatorUseCase)
             makeComicListView(with: ComicListViewModel(useCases: useCases))
         }
     }

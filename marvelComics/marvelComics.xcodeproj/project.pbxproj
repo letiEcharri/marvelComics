@@ -26,6 +26,7 @@
 		B80657C22B9CFDE900D4254D /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657C12B9CFDE900D4254D /* Comic.swift */; };
 		B80657C42B9CFE3A00D4254D /* ComicRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657C32B9CFE3A00D4254D /* ComicRepositoryContract.swift */; };
 		B80657C82B9D054700D4254D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657C72B9D054700D4254D /* LoadingView.swift */; };
+		B80657CA2B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657C92B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		B80657C12B9CFDE900D4254D /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		B80657C32B9CFE3A00D4254D /* ComicRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepositoryContract.swift; sourceTree = "<group>"; };
 		B80657C72B9D054700D4254D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B80657C92B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicListGroupByCreatorUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				B80657BC2B9CF56300D4254D /* GetComicListUseCase.swift */,
+				B80657C92B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			files = (
 				B80657BD2B9CF56300D4254D /* GetComicListUseCase.swift in Sources */,
 				B80657C42B9CFE3A00D4254D /* ComicRepositoryContract.swift in Sources */,
+				B80657CA2B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift in Sources */,
 				B80657AB2B9CE4C700D4254D /* DataSource.swift in Sources */,
 				B80657742B9CCC2400D4254D /* ContentView.swift in Sources */,
 				B806579F2B9CD04400D4254D /* ComicListView.swift in Sources */,

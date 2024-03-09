@@ -15,4 +15,18 @@ struct Comic {
     let variantDescription: String?
     let description: String?
     let isbn: String
+    let creators: ComicCreators?
 }
+
+struct ComicCreators: Codable {
+    let available: Int?
+    let collectionURI: String?
+    let items: [ComicCreatorsItem]?
+    let returned: Int?
+}
+
+struct ComicCreatorsItem: Codable {
+    let resourceURI: String?
+    let name, role: String?
+}
+

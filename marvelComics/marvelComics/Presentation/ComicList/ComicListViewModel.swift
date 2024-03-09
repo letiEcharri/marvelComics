@@ -9,15 +9,29 @@ import Foundation
 
 protocol ComicListViewModelContract: ObservableObject {
     var comics: [String] { get }
+    var sections: [ComicListViewModel.Section] { get }
     var loading: Bool { get set }
 }
 
 class ComicListViewModel: ComicListViewModelContract {
+    struct Section: Hashable {
+        let name: String
+        let comics: [ComicData]
+    }
+    
+    struct ComicData: Hashable {
+        let id: Int
+        let name: String
+        let description: String
+    }
+    
     struct UseCases {
         let getList: GetComicListUseCaseContract
+        let getGroupedList: GetComicListGroupByCreatorUseCaseContract
     }
     
     @Published var comics: [String] = []
+    @Published var sections: [Section] = []
     @Published var loading = false
     private var useCases: UseCases
     
@@ -30,9 +44,16 @@ class ComicListViewModel: ComicListViewModelContract {
         loading = true
         Task {
             do {
-                let dataComics = try await useCases.getList.execute()
+                let dataComics = try await useCases.getGroupedList.execute()
                 DispatchQueue.main.async {
-                    self.comics = dataComics.compactMap { $0.title }
+                    self.sections = dataComics.compactMap {
+                        Section(name: $0.key,
+                                comics: $0.comics.compactMap { item in
+                            ComicData(id: item.id,
+                                      name: item.title,
+                                      description: item.description ?? "")
+                        } )
+                    }
                     self.loading = false
                 }
             } catch {

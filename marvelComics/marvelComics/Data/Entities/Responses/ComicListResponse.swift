@@ -32,4 +32,42 @@ struct ComicListDataResult: Codable {
     let variantDescription: String?
     let description: String?
     let isbn: String
+    let creators: ComicResultCreators?
+    
+    func toDomain() -> Comic {
+        Comic(id: id,
+              digitalId: digitalId,
+              title: title,
+              issueNumber: issueNumber,
+              variantDescription: variantDescription,
+              description: description,
+              isbn: isbn, 
+              creators: creators?.toDomain())
+    }
+}
+    
+
+struct ComicResultCreators: Codable {
+    let available: Int?
+    let collectionURI: String?
+    let items: [ComicResultCreatorsItem]?
+    let returned: Int?
+    
+    func toDomain() -> ComicCreators {
+        ComicCreators(available: available,
+                      collectionURI: collectionURI,
+                      items: items?.compactMap { $0.toDomain() },
+                      returned: returned)
+    }
+}
+
+struct ComicResultCreatorsItem: Codable {
+    let resourceURI: String?
+    let name, role: String?
+    
+    func toDomain() -> ComicCreatorsItem {
+        ComicCreatorsItem(resourceURI: resourceURI,
+                          name: name,
+                          role: role)
+    }
 }

@@ -10,19 +10,19 @@ import SwiftUI
 struct ComicListView<T: ComicListViewModelContract>: View {
     @ObservedObject var viewModel: T
     
-    private var listRow: some View {
-        ForEach(viewModel.comics, id: \.self) { item in
-            NavigationLink(item) {
-                
-            }
-        }
-    }
-    
-    var body: some View {
+   var body: some View {
         LoadingView(isShowing: $viewModel.loading) {
-            NavigationView {
-                List {
-                    listRow
+            List {
+                ForEach(viewModel.sections, id: \.self) { section in
+                    Section {
+                        ForEach(section.comics, id: \.self) { comic in
+                            NavigationLink(comic.name) {
+                                
+                            }
+                        }
+                    } header: {
+                        Text(section.name)
+                    }
                 }
             }
         }
