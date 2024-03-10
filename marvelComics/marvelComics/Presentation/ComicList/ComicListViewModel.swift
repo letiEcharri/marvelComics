@@ -8,7 +8,6 @@
 import Foundation
 
 protocol ComicListViewModelContract: ObservableObject {
-    var comics: [String] { get }
     var sections: [ComicListViewModel.Section] { get }
     var loading: Bool { get set }
 }
@@ -30,7 +29,6 @@ class ComicListViewModel: ComicListViewModelContract {
         let getGroupedList: GetComicListGroupByCreatorUseCaseContract
     }
     
-    @Published var comics: [String] = []
     @Published var sections: [Section] = []
     @Published var loading = false
     private var useCases: UseCases

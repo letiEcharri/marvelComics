@@ -32,6 +32,7 @@ struct ComicListDataResult: Codable {
     let variantDescription: String?
     let description: String?
     let isbn: String
+    let urls: [ComicListUrl]?
     let creators: ComicResultCreators?
     
     func toDomain() -> Comic {
@@ -42,10 +43,20 @@ struct ComicListDataResult: Codable {
               variantDescription: variantDescription,
               description: description,
               isbn: isbn, 
+              urls: urls?.compactMap { $0.toDomain() },
               creators: creators?.toDomain())
     }
 }
+
+struct ComicListUrl: Codable {
+    let type: String
+    let url: String
     
+    func toDomain() -> ComicUrl {
+        ComicUrl(type: type,
+                 url: url)
+    }
+}
 
 struct ComicResultCreators: Codable {
     let available: Int?

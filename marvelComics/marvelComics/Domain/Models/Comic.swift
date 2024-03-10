@@ -15,7 +15,13 @@ struct Comic {
     let variantDescription: String?
     let description: String?
     let isbn: String
+    let urls: [ComicUrl]?
     let creators: ComicCreators?
+}
+
+struct ComicUrl {
+    let type: String
+    let url: String
 }
 
 struct ComicCreators: Codable {
