@@ -28,6 +28,7 @@
 		B80657C82B9D054700D4254D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657C72B9D054700D4254D /* LoadingView.swift */; };
 		B80657CA2B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657C92B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift */; };
 		B80657CD2B9DB8BE00D4254D /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657CC2B9DB8BE00D4254D /* ComicDetailView.swift */; };
+		B80657CF2B9DBCA300D4254D /* ComicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657CE2B9DBCA300D4254D /* ComicDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B80657C72B9D054700D4254D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B80657C92B9D10E700D4254D /* GetComicListGroupByCreatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicListGroupByCreatorUseCase.swift; sourceTree = "<group>"; };
 		B80657CC2B9DB8BE00D4254D /* ComicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailView.swift; sourceTree = "<group>"; };
+		B80657CE2B9DBCA300D4254D /* ComicDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				B80657CC2B9DB8BE00D4254D /* ComicDetailView.swift */,
+				B80657CE2B9DBCA300D4254D /* ComicDetailViewModel.swift */,
 			);
 			path = ComicDetail;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				B80657C82B9D054700D4254D /* LoadingView.swift in Sources */,
 				B80657B62B9CEC5800D4254D /* ComicListResponse.swift in Sources */,
 				B80657CD2B9DB8BE00D4254D /* ComicDetailView.swift in Sources */,
+				B80657CF2B9DBCA300D4254D /* ComicDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

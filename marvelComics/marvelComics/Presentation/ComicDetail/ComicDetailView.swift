@@ -7,13 +7,22 @@
 
 import SwiftUI
 
-struct ComicDetailView: View {
+struct ComicDetailView<T: ComicDetailViewModelContract>: View {
+    @ObservedObject var viewModel: T
+    
     var body: some View {
         VStack(spacing: 10) {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text(viewModel.comic.title)
                 .fontWeight(.bold)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            Text("Description")
+            HStack {
+                Text("Creator:")
+                    .fontWeight(.bold)
+                Text(viewModel.comic.creator)
+            }
+            Text("DESCRIPTION")
+                .fontWeight(.bold)
+            Text(viewModel.comic.formattedDescription)
         }
         .padding(EdgeInsets(top: 10,
                             leading: 10,
@@ -23,11 +32,14 @@ struct ComicDetailView: View {
 }
 
 #Preview {
-    Factory.detail.view
+    Factory.detail(ComicDetailViewModel.DetailModel(title: "Ironman",
+                                                    description: "This is a description", 
+                                                    creator: "John"))
+    .view
 }
 
 extension Factory {
-    internal func makeComicDetailView() -> some View {
-        ComicDetailView()
+    internal func makeComicDetailView(with viewModel: ComicDetailViewModel) -> some View {
+        ComicDetailView(viewModel: viewModel)
     }
 }

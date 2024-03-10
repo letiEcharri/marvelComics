@@ -9,7 +9,7 @@ import SwiftUI
 
 enum Factory {
     case list
-    case detail
+    case detail(ComicDetailViewModel.DetailModel)
     
     @ViewBuilder
     var view: some View {
@@ -21,8 +21,9 @@ enum Factory {
             let useCases = ComicListViewModel.UseCases(getList: getListUseCase,
                                                        getGroupedList: getComicListGroupByCreatorUseCase)
             makeComicListView(with: ComicListViewModel(useCases: useCases))
-        case .detail:
-            makeComicDetailView()
+        case .detail(let comic):
+            let viewModel = ComicDetailViewModel(comic: comic)
+            makeComicDetailView(with: viewModel)
         }
     }
 }

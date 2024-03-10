@@ -17,7 +17,11 @@ struct ComicListView<T: ComicListViewModelContract>: View {
                     ForEach(viewModel.sections, id: \.self) { section in
                         Section {
                             ForEach(section.comics, id: \.self) { comic in
-                                NavigationLink(destination: Factory.detail.view) {
+                                NavigationLink(destination: 
+                                                Factory.detail(.init(title: comic.name,
+                                                                     description: comic.description, 
+                                                                     creator: section.name))
+                                    .view) {
                                     Text(comic.name)
                                 }
                             }
