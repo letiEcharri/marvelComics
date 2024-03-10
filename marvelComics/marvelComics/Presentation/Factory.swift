@@ -15,7 +15,8 @@ enum Factory {
     var view: some View {
         switch self {
         case .list:
-            let repository = ComicRepository()
+            let dataSource = MarvelDataSource()
+            let repository = ComicRepository(dataSource: dataSource)
             let getListUseCase = GetComicListUseCase(repository: repository)
             let getComicListGroupByCreatorUseCase = GetComicListGroupByCreatorUseCase(repository: repository)
             let useCases = ComicListViewModel.UseCases(getList: getListUseCase,

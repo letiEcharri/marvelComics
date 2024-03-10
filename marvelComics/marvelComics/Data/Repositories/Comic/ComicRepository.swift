@@ -7,12 +7,18 @@
 
 import Foundation
 
-class ComicRepository: ComicRepositoryContract, DataSource {
+class ComicRepository: ComicRepositoryContract {
+    private let dataSource: DataSource
+    
+    init(dataSource: DataSource) {
+        self.dataSource = dataSource
+    }
+    
     func getList() async throws -> [Comic] {
         return try await withCheckedThrowingContinuation { continuation in
-            executeRequest(from: .comics,
-                           identifier: nil,
-                           parameters: nil) { response in
+            dataSource.executeRequest(from: MarvelDataSource.MarvelDataSourceModule.comics.rawValue,
+                                      identifier: nil,
+                                      parameters: nil) { response in
                 guard let data = response as? Data else {
                     let error = NSError(domain: "",
                                         code: 0,
