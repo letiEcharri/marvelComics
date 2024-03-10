@@ -304,14 +304,6 @@
 			path = ComicDetail;
 			sourceTree = "<group>";
 		};
-		B80657D02B9DCD8300D4254D /* ComicList */ = {
-			isa = PBXGroup;
-			children = (
-				B80657D12B9DCDA400D4254D /* ComicListViewModelTests.swift */,
-			);
-			path = ComicList;
-			sourceTree = "<group>";
-		};
 		B80657D32B9DCE4100D4254D /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +326,7 @@
 		B80657D52B9DCE5100D4254D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B80657D02B9DCD8300D4254D /* ComicList */,
+				B80657D12B9DCDA400D4254D /* ComicListViewModelTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";

@@ -34,29 +34,29 @@ class ComicListViewModel: ComicListViewModelContract {
     
     init(useCases: UseCases) {
         self.useCases = useCases
-        getComics()
+        Task {
+           await getComics()
+        }
     }
     
-    func getComics() {
+    func getComics() async {
         loading = true
-        Task {
-            do {
-                let dataComics = try await useCases.getGroupedList.execute()
-                DispatchQueue.main.async {
-                    self.sections = dataComics.compactMap {
-                        Section(name: $0.key,
-                                comics: $0.comics.compactMap { item in
-                            ComicData(id: item.id,
-                                      name: item.title,
-                                      description: item.description ?? "")
-                        } )
-                    }
-                    self.loading = false
+        do {
+            let dataComics = try await useCases.getGroupedList.execute()
+            DispatchQueue.main.async {
+                self.sections = dataComics.compactMap {
+                    Section(name: $0.key,
+                            comics: $0.comics.compactMap { item in
+                        ComicData(id: item.id,
+                                  name: item.title,
+                                  description: item.description ?? "")
+                    } )
                 }
-            } catch {
-                print(error)
-                loading = false
+                self.loading = false
             }
+        } catch {
+            print(error)
+            loading = false
         }
     }
 }
