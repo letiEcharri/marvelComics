@@ -56,7 +56,9 @@ class ComicListViewModel: ComicListViewModelContract {
             }
         } catch {
             print(error)
-            loading = false
+            DispatchQueue.main.async {
+                self.loading = false
+            }
         }
     }
 }

@@ -40,6 +40,7 @@
 		B80658022B9DE57E00D4254D /* LauncherApplication.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = B80657F02B9DE43200D4254D /* LauncherApplication.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B80658052B9DE5A500D4254D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80658042B9DE5A500D4254D /* ServiceManagement.framework */; };
 		B80658072B9DE8EC00D4254D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80658062B9DE8EC00D4254D /* main.swift */; };
+		B80658092B9DF63600D4254D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80658082B9DF63600D4254D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		B80657FB2B9DE43300D4254D /* LauncherApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LauncherApplication.entitlements; sourceTree = "<group>"; };
 		B80658042B9DE5A500D4254D /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		B80658062B9DE8EC00D4254D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B80658082B9DF63600D4254D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				B806577A2B9CCC2500D4254D /* marvelComics.entitlements */,
 				B80657772B9CCC2500D4254D /* Preview Content */,
 				B80657BE2B9CFA2C00D4254D /* Info.plist */,
+				B80658082B9DF63600D4254D /* AppDelegate.swift */,
 			);
 			path = marvelComics;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				B80657C82B9D054700D4254D /* LoadingView.swift in Sources */,
 				B80657B62B9CEC5800D4254D /* ComicListResponse.swift in Sources */,
 				B80657CD2B9DB8BE00D4254D /* ComicDetailView.swift in Sources */,
+				B80658092B9DF63600D4254D /* AppDelegate.swift in Sources */,
 				B80657CF2B9DBCA300D4254D /* ComicDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +746,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,6 +774,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

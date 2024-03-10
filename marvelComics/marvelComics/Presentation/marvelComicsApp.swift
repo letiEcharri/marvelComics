@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-import ServiceManagement
 
 @main
 struct marvelComicsApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self)
+    private var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            let _ = try? SMAppService.mainApp.register()
             Factory.list.view
         }
     }
