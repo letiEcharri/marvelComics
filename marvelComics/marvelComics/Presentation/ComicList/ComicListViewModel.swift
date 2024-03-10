@@ -25,7 +25,6 @@ class ComicListViewModel: ComicListViewModelContract {
     }
     
     struct UseCases {
-        let getList: GetComicListUseCaseContract
         let getGroupedList: GetComicListGroupByCreatorUseCaseContract
     }
     

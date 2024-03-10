@@ -17,10 +17,8 @@ enum Factory {
         case .list:
             let dataSource = MarvelDataSource()
             let repository = ComicRepository(dataSource: dataSource)
-            let getListUseCase = GetComicListUseCase(repository: repository)
             let getComicListGroupByCreatorUseCase = GetComicListGroupByCreatorUseCase(repository: repository)
-            let useCases = ComicListViewModel.UseCases(getList: getListUseCase,
-                                                       getGroupedList: getComicListGroupByCreatorUseCase)
+            let useCases = ComicListViewModel.UseCases(getGroupedList: getComicListGroupByCreatorUseCase)
             makeComicListView(with: ComicListViewModel(useCases: useCases))
         case .detail(let comic):
             let viewModel = ComicDetailViewModel(comic: comic)
