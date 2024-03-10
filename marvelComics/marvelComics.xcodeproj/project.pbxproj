@@ -36,6 +36,10 @@
 		B80657E32B9DDAD700D4254D /* GetComicListGroupByCreatorUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657E22B9DDAD700D4254D /* GetComicListGroupByCreatorUseCaseTests.swift */; };
 		B80657E52B9DDB0200D4254D /* ComicRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657E42B9DDB0200D4254D /* ComicRepositoryMock.swift */; };
 		B80657EB2B9DE17100D4254D /* ComicDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657EA2B9DE17100D4254D /* ComicDetailViewModelTests.swift */; };
+		B80657F32B9DE43200D4254D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657F22B9DE43200D4254D /* AppDelegate.swift */; };
+		B80658022B9DE57E00D4254D /* LauncherApplication.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = B80657F02B9DE43200D4254D /* LauncherApplication.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B80658052B9DE5A500D4254D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80658042B9DE5A500D4254D /* ServiceManagement.framework */; };
+		B80658072B9DE8EC00D4254D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80658062B9DE8EC00D4254D /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,19 @@
 			remoteInfo = marvelComics;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B80658012B9DE54700D4254D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				B80658022B9DE57E00D4254D /* LauncherApplication.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B806576E2B9CCC2400D4254D /* marvelComics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marvelComics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +106,11 @@
 		B80657E22B9DDAD700D4254D /* GetComicListGroupByCreatorUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicListGroupByCreatorUseCaseTests.swift; sourceTree = "<group>"; };
 		B80657E42B9DDB0200D4254D /* ComicRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepositoryMock.swift; sourceTree = "<group>"; };
 		B80657EA2B9DE17100D4254D /* ComicDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewModelTests.swift; sourceTree = "<group>"; };
+		B80657F02B9DE43200D4254D /* LauncherApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LauncherApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80657F22B9DE43200D4254D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B80657FB2B9DE43300D4254D /* LauncherApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LauncherApplication.entitlements; sourceTree = "<group>"; };
+		B80658042B9DE5A500D4254D /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		B80658062B9DE8EC00D4254D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80658052B9DE5A500D4254D /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B80657ED2B9DE43200D4254D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,7 +152,9 @@
 				B80657702B9CCC2400D4254D /* marvelComics */,
 				B80657822B9CCC2600D4254D /* marvelComicsTests */,
 				B806578C2B9CCC2600D4254D /* marvelComicsUITests */,
+				B80657F12B9DE43200D4254D /* LauncherApplication */,
 				B806576F2B9CCC2400D4254D /* Products */,
+				B80658032B9DE5A500D4254D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +164,7 @@
 				B806576E2B9CCC2400D4254D /* marvelComics.app */,
 				B806577F2B9CCC2600D4254D /* marvelComicsTests.xctest */,
 				B80657892B9CCC2600D4254D /* marvelComicsUITests.xctest */,
+				B80657F02B9DE43200D4254D /* LauncherApplication.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +364,24 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		B80657F12B9DE43200D4254D /* LauncherApplication */ = {
+			isa = PBXGroup;
+			children = (
+				B80657F22B9DE43200D4254D /* AppDelegate.swift */,
+				B80657FB2B9DE43300D4254D /* LauncherApplication.entitlements */,
+				B80658062B9DE8EC00D4254D /* main.swift */,
+			);
+			path = LauncherApplication;
+			sourceTree = "<group>";
+		};
+		B80658032B9DE5A500D4254D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B80658042B9DE5A500D4254D /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +392,7 @@
 				B806576A2B9CCC2400D4254D /* Sources */,
 				B806576B2B9CCC2400D4254D /* Frameworks */,
 				B806576C2B9CCC2400D4254D /* Resources */,
+				B80658012B9DE54700D4254D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -387,6 +439,23 @@
 			productReference = B80657892B9CCC2600D4254D /* marvelComicsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B80657EF2B9DE43200D4254D /* LauncherApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80657FE2B9DE43300D4254D /* Build configuration list for PBXNativeTarget "LauncherApplication" */;
+			buildPhases = (
+				B80657EC2B9DE43200D4254D /* Sources */,
+				B80657ED2B9DE43200D4254D /* Frameworks */,
+				B80657EE2B9DE43200D4254D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LauncherApplication;
+			productName = LauncherApplication;
+			productReference = B80657F02B9DE43200D4254D /* LauncherApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -408,6 +477,9 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = B806576D2B9CCC2400D4254D;
 					};
+					B80657EF2B9DE43200D4254D = {
+						CreatedOnToolsVersion = 15.2;
+					};
 				};
 			};
 			buildConfigurationList = B80657692B9CCC2400D4254D /* Build configuration list for PBXProject "marvelComics" */;
@@ -426,6 +498,7 @@
 				B806576D2B9CCC2400D4254D /* marvelComics */,
 				B806577E2B9CCC2600D4254D /* marvelComicsTests */,
 				B80657882B9CCC2600D4254D /* marvelComicsUITests */,
+				B80657EF2B9DE43200D4254D /* LauncherApplication */,
 			);
 		};
 /* End PBXProject section */
@@ -450,6 +523,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B80657872B9CCC2600D4254D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80657EE2B9DE43200D4254D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,6 +582,15 @@
 			files = (
 				B806578E2B9CCC2600D4254D /* marvelComicsUITests.swift in Sources */,
 				B80657902B9CCC2600D4254D /* marvelComicsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80657EC2B9DE43200D4254D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80658072B9DE8EC00D4254D /* main.swift in Sources */,
+				B80657F32B9DE43200D4254D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +854,64 @@
 			};
 			name = Release;
 		};
+		B80657FC2B9DE43300D4254D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LauncherApplication/LauncherApplication.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74F5A5SVZ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = leticiaecharri.LauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B80657FD2B9DE43300D4254D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LauncherApplication/LauncherApplication.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74F5A5SVZ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = leticiaecharri.LauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -800,6 +947,15 @@
 			buildConfigurations = (
 				B806579A2B9CCC2600D4254D /* Debug */,
 				B806579B2B9CCC2600D4254D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B80657FE2B9DE43300D4254D /* Build configuration list for PBXNativeTarget "LauncherApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80657FC2B9DE43300D4254D /* Debug */,
+				B80657FD2B9DE43300D4254D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
