@@ -12,16 +12,18 @@ struct ComicListView<T: ComicListViewModelContract>: View {
     
    var body: some View {
         LoadingView(isShowing: $viewModel.loading) {
-            List {
-                ForEach(viewModel.sections, id: \.self) { section in
-                    Section {
-                        ForEach(section.comics, id: \.self) { comic in
-                            NavigationLink(comic.name) {
-                                
+            NavigationView {
+                List {
+                    ForEach(viewModel.sections, id: \.self) { section in
+                        Section {
+                            ForEach(section.comics, id: \.self) { comic in
+                                NavigationLink(destination: Factory.detail.view) {
+                                    Text(comic.name)
+                                }
                             }
+                        } header: {
+                            Text(section.name)
                         }
-                    } header: {
-                        Text(section.name)
                     }
                 }
             }

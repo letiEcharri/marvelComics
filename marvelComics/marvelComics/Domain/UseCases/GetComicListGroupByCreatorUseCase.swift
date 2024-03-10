@@ -30,8 +30,10 @@ struct GetComicListGroupByCreatorUseCase: GetComicListGroupByCreatorUseCaseContr
 
     func execute() async throws -> [ComicsGrouped] {
         let comics = try await repository.getList()
-        let dictionary = comics.compactMap { ComicWithCreator(key: getCreatorName(from: $0.creators?.items),
-                                                          comic: $0) }
+        let dictionary = comics.compactMap {
+            ComicWithCreator(key: getCreatorName(from: $0.creators?.items),
+                             comic: $0)
+        }
         let grouped = Dictionary(grouping: dictionary, by: { $0.key }).compactMap { item in
             ComicsGrouped(key: item.key,
                           comics: item.value.compactMap { $0.comic })
