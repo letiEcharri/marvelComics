@@ -10,7 +10,6 @@ import Foundation
 class MarvelDataSource: DataSource {
     
     enum MarvelDataSourceModule: String {
-        case characters = "/characters"
         case comics = "/comics"
     }
     

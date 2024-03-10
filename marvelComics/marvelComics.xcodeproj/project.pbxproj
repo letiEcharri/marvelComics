@@ -32,6 +32,9 @@
 		B80657D22B9DCDA400D4254D /* ComicListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657D12B9DCDA400D4254D /* ComicListViewModelTests.swift */; };
 		B80657D72B9DCE6700D4254D /* ComicRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657D62B9DCE6700D4254D /* ComicRepositoryTests.swift */; };
 		B80657D92B9DCF3F00D4254D /* MarvelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657D82B9DCF3F00D4254D /* MarvelDataSource.swift */; };
+		B80657DB2B9DD22B00D4254D /* MarvelDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657DA2B9DD22B00D4254D /* MarvelDataSourceMock.swift */; };
+		B80657DD2B9DD3B400D4254D /* comics.json in Resources */ = {isa = PBXBuildFile; fileRef = B80657DC2B9DD3B400D4254D /* comics.json */; };
+		B80657DF2B9DD4F600D4254D /* LocalJsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80657DE2B9DD4F600D4254D /* LocalJsonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		B80657D12B9DCDA400D4254D /* ComicListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListViewModelTests.swift; sourceTree = "<group>"; };
 		B80657D62B9DCE6700D4254D /* ComicRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepositoryTests.swift; sourceTree = "<group>"; };
 		B80657D82B9DCF3F00D4254D /* MarvelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSource.swift; sourceTree = "<group>"; };
+		B80657DA2B9DD22B00D4254D /* MarvelDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSourceMock.swift; sourceTree = "<group>"; };
+		B80657DC2B9DD3B400D4254D /* comics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comics.json; sourceTree = "<group>"; };
+		B80657DE2B9DD4F600D4254D /* LocalJsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,7 @@
 				B80657D42B9DCE4B00D4254D /* Domain */,
 				B80657D32B9DCE4100D4254D /* Data */,
 				B80657832B9CCC2600D4254D /* marvelComicsTests.swift */,
+				B80657DE2B9DD4F600D4254D /* LocalJsonService.swift */,
 			);
 			path = marvelComicsTests;
 			sourceTree = "<group>";
@@ -307,6 +314,8 @@
 		B80657D32B9DCE4100D4254D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B80657DC2B9DD3B400D4254D /* comics.json */,
+				B80657DA2B9DD22B00D4254D /* MarvelDataSourceMock.swift */,
 				B80657D62B9DCE6700D4254D /* ComicRepositoryTests.swift */,
 			);
 			path = Data;
@@ -441,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80657DD2B9DD3B400D4254D /* comics.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B80657D72B9DCE6700D4254D /* ComicRepositoryTests.swift in Sources */,
+				B80657DF2B9DD4F600D4254D /* LocalJsonService.swift in Sources */,
+				B80657DB2B9DD22B00D4254D /* MarvelDataSourceMock.swift in Sources */,
 				B80657D22B9DCDA400D4254D /* ComicListViewModelTests.swift in Sources */,
 				B80657842B9CCC2600D4254D /* marvelComicsTests.swift in Sources */,
 			);
